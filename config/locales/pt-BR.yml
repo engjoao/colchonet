@@ -11,7 +11,7 @@ pt-BR:
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
     confirmations:
-      sucess: Email confirmado com sucesso, obrigado!
+      success: Email confirmado com sucesso, obrigado!
 
   rooms:
     new:

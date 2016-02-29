@@ -14,16 +14,14 @@ class User < ActiveRecord::Base
 	end
 
 	def confirm!
-		return if confirmed?
+	  return if confirmed?
 
-		self.confirmed_at = Time.current
-		self.confirmed_token = ''
-		save!
+	  self.confirmed_at = Time.current
+	  self.confirmation_token = ''
+	  save!
 	end
 
 	def confirmed?
-
-		confirmed_at.present?
+	  confirmed_at.present?
 	end
-
 end
