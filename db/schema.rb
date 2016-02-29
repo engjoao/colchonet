@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223195328) do
+ActiveRecord::Schema.define(version: 20160227152744) do
 
   create_table "rooms", force: true do |t|
     t.string   "title"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20160223195328) do
     t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "confirmed_at"
+    t.string   "confirmation_token"
   end
 
 end
