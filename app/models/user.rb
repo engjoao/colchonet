@@ -1,9 +1,13 @@
 class User < ActiveRecord::Base
+	/has_many :rooms, :dependent => :destroy/
+  	/has_many :reviews, :dependent => :destroy/
 
 	validates_presence_of :email, :full_name, :location
 	validates_length_of :bio, :minimum => 30, :allow_blank => false
 	validates_format_of :email, :with => /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 	validates_uniqueness_of :email
+
+	scope :confirmed, -> {where(confirmed_at: nil)}
 
 	has_secure_password
 
@@ -24,4 +28,11 @@ class User < ActiveRecord::Base
 	def confirmed?
 	  confirmed_at.present?
 	end
+
+
+  	def self.authenticate(email, password)
+      user = confirmed.
+      find_by_email(email).
+      try(:authenticate, password)
+ 	end
 end
