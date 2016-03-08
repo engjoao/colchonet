@@ -43,6 +43,7 @@ class RoomsController < ApplicationController
   def destroy
     @room = current_user.rooms.find(params[:id])
     @room.destroy
+    
     redirect_to rooms_url
   end
 

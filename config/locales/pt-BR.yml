@@ -30,13 +30,17 @@ pt-BR:
     new:
       title: Novo quarto
     edit:
-      title: Editar quarto 
-  room:
-    description: Descrição
-    location: Localização
-    title: Título
-    text: Texto
+      title: Editar quarto
+    index:
+      title: Lista de quartos
 
+    room:
+      description: Descrição
+      location: Localização
+      title: Título
+      text: Texto
+      owner_html: "Proprietário: %{owner}" 
+    
   signup_mailer:
     confirm_email:
       subject: 'Colcho.net - Confirme seu email'
@@ -51,11 +55,14 @@ pt-BR:
       thanks_html: 'Obrigado por se cadastrar no %{link}.'
 
   links:
-    back: Voltar
-    New Room: Novo quarto
-    show: Mostrar
-    edit: Editar
-    destroy: Deletar
+    back: 'Voltar'
+    New Room: 'Novo quarto'
+    show: 'Mostrar'
+    edit: 'Editar'
+    destroy: 'Remover'
+
+  dialogs:
+    destroy: 'Você tem certeza que quer remover?'
 
   layout:
     rooms: Quartos
