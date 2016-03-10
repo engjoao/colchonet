@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    
     if @user.save
       SignupMailer.confirm_email(@user).deliver
       redirect_to @user, :notice => 'Cadastro criado com sucesso!'
@@ -26,6 +27,7 @@ class UsersController < ApplicationController
 
     def update
       @user = User.find(params[:id])
+      
       if @user.update_attributes(user_params)
           redirect_to @user,
               :notice => 'Cadastro atualizado com sucesso!'

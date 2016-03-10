@@ -6,7 +6,6 @@ class UserSession
 	extend ActiveModel::Naming
 	
 	attr_accessor :email, :password
-	
 	validates_presence_of :email, :password
 
   def initialize(session, attributes={})
@@ -15,8 +14,13 @@ class UserSession
 	@password = attributes[:password]
   end
 
-  def authenticate
-	user = User.authenticate(@email, @password)
+  def authenticate!
+    puts @email
+    puts @password
+
+    user = User.authenticate(@email, @password)
+
+    puts user
 
 	if user.present?
 	  store(user)
@@ -24,6 +28,7 @@ class UserSession
 	  errors.add(:base, :invalid_login)
 	  false
 	end
+  
   end
 
   def store(user)
@@ -35,7 +40,7 @@ class UserSession
   end
 
   def current_user
-  	User.find(@session[:user_id])
+    User.find(@session[:user_id])
   end
 
   def user_signed_in?

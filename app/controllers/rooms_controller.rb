@@ -1,11 +1,13 @@
 class RoomsController < ApplicationController
+  before_action :set_room, only: [:show]
+  before_action :set_users_room, only: [:edit, :update, :destroy]
   before_action :require_authentication, 
     :only => [:new, :edit, :create, :update, :destroy]
 
   def index
     # Exercício pra você! Crie um escopo para ordenar
     # os quartos dos mais recentes aos mais antigos.
-    @rooms = Room.all
+    @rooms = Room.most_recent
   end
 
   def show

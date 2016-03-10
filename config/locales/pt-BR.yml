@@ -11,7 +11,7 @@ pt-BR:
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
     confirmations:
-      success: Email confirmado com sucesso, obrigado!
+      success: 'Email confirmado com sucesso, obrigado!'
   user_sessions:
     new:
       title: 'Login'
@@ -28,18 +28,18 @@ pt-BR:
 
   rooms:
     new:
-      title: Novo quarto
+      title: 'Novo quarto'
     edit:
-      title: Editar quarto
+      title: 'Editar quarto'
     index:
-      title: Lista de quartos
+      title: 'Quartos disponíveis'
 
     room:
       description: Descrição
       location: Localização
       title: Título
       text: Texto
-      owner_html: "Proprietário: %{owner}" 
+      owner_html: '&mdash; %{owner} (%{when})'
     
   signup_mailer:
     confirm_email:
