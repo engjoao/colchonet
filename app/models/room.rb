@@ -1,5 +1,6 @@
 class Room < ActiveRecord::Base
-	belongs_to :user
+  has_many :reviews, :dependent => :destroy
+  belongs_to :user
   
   def complete_name
 	"#{title}, #{location}"

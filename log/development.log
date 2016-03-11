@@ -3013,3 +3013,423 @@ Processing by RoomsController#show as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
   Rendered layouts/_user_navbar.html.erb (1.0ms)
 Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 10:06:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (9.0ms)
+Completed 200 OK in 438ms (Views: 388.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-11 10:06:34 -0300
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2016-03-11 10:08:04 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/new.html.erb within layouts/application (55.1ms)
+  Rendered layouts/_visitor_navbar.html.erb (1.0ms)
+Completed 200 OK in 114ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ma4cPcGvdKxZdM2IjnXRBen4kYGmS3Zld4JJnUqmgpQ=", "user_session"=>{"email"=>"eduardo@example.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."confirmed_at" IS NULL AND "users"."email" = 'eduardo@example.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 154ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (47.0ms)
+Completed 200 OK in 110ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-11 10:08:11 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-11 10:08:39 -0300
+Processing by RoomsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."user_id" = ?  ORDER BY "rooms"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (7.0ms)
+  Rendered rooms/index.html.erb within layouts/application (214.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 303ms (Views: 302.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2016-03-11 10:08:41 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (5.0ms)
+  Rendered rooms/show.html.erb within layouts/application (7.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-03-11 10:08:50 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (3.0ms)
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-11 10:08:53 -0300
+Processing by RoomsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."user_id" = ?  ORDER BY "rooms"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (3.0ms)
+  Rendered rooms/index.html.erb within layouts/application (8.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-03-11 10:10:11 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-11 10:16:51 -0300
+Processing by RoomsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 10:16:51 -0300
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (14.0ms)
+Completed 200 OK in 81ms (Views: 76.0ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/user_sessions" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ma4cPcGvdKxZdM2IjnXRBen4kYGmS3Zld4JJnUqmgpQ="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-11 10:16:55 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-11 10:17:51 -0300
+Processing by RoomsController#index as HTML
+  Rendered rooms/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/models/user_session.rb:43:in `current_user'
+  app/views/rooms/index.html.erb:3:in `_app_views_rooms_index_html_erb___346815566_29361660'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-11 10:17:51 -0300
+Processing by RoomsController#index as HTML
+  Rendered rooms/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/models/user_session.rb:43:in `current_user'
+  app/views/rooms/index.html.erb:3:in `_app_views_rooms_index_html_erb___346815566_54383232'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateReviews (20160311133403)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "room_id" integer, "points" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_reviews_on_room_id" ON "reviews" ("room_id")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160311133403"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_room_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_room_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rooms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rooms_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCounterCacheToRooms (20160311134120)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "rooms" ADD "reviews_count" integer[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160311134120"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_room_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_room_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rooms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rooms_on_user_id' AND type='index'
+[0m
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"   ORDER BY "rooms"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mReview Exists (0.0ms)[0m  SELECT  1 AS one FROM "reviews"  WHERE ("reviews"."user_id" = 1 AND "reviews"."room_id" = 2) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "reviews" ("created_at", "points", "room_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2016-03-11 13:52:40.346349"], ["points", 3], ["room_id", 2], ["updated_at", "2016-03-11 13:52:40.346349"], ["user_id", 1]]
+  [1m[35mSQL (1.0ms)[0m  UPDATE "rooms" SET "reviews_count" = COALESCE("reviews_count", 0) + 1 WHERE "rooms"."id" = 2
+  [1m[36m (60.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/new.html.erb within layouts/application (55.1ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 216ms (Views: 191.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-11 10:53:15 -0300
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ma4cPcGvdKxZdM2IjnXRBen4kYGmS3Zld4JJnUqmgpQ=", "user_session"=>{"email"=>"eduardo@example.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."confirmed_at" IS NULL AND "users"."email" = 'eduardo@example.com' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 113ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+Processing by HomeController#index as HTML
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (8.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (5.0ms)
+Completed 200 OK in 85ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-11 10:55:18 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-11 10:55:59 -0300
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."user_id" = ?  ORDER BY "rooms"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (4.0ms)
+  Rendered rooms/index.html.erb within layouts/application (32.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (3.0ms)
+Completed 200 OK in 100ms (Views: 98.1ms | ActiveRecord: 1.0ms)

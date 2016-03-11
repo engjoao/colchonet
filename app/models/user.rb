@@ -1,15 +1,14 @@
 class User < ActiveRecord::Base
-	/has_many :rooms, :dependent => :destroy/
-  	/has_many :reviews, :dependent => :destroy/
+	has_many :rooms, dependent: :destroy
+	has_many :reviews, dependent: :destroy
+	has_many :reviewed_rooms, through: :reviews, source: :room
 
-  	has_many :rooms
+	scope :confirmed, -> {where(confirmed_at: nil)}
 
 	validates_presence_of :email, :full_name, :location
 	validates_length_of :bio, :minimum => 30, :allow_blank => false
 	validates_format_of :email, :with => /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 	validates_uniqueness_of :email
-
-	scope :confirmed, -> {where(confirmed_at: nil)}
 
 	has_secure_password
 

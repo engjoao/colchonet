@@ -8,6 +8,10 @@ class CreateRooms < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :users, :email, :uniqueness => true
+    add_index :reviews, :user_id
+	add_index :reviews, :room_id
+
+	add_index :reviews, [:user_id, :room_id], :unique => true
+	
   end
 end
