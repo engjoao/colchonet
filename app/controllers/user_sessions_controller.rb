@@ -7,6 +7,7 @@ class UserSessionsController < ApplicationController
   end
 
   def create
+
     @user_session = UserSession.new(session,
                                     params[:user_session])
     if @user_session.authenticate!
@@ -15,6 +16,7 @@ class UserSessionsController < ApplicationController
     else
       render :new
     end
+
   end
 
   def destroy
