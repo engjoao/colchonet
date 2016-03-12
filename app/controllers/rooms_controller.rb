@@ -4,13 +4,15 @@ class RoomsController < ApplicationController
     :only => [:new, :edit, :create, :update, :destroy]
 
   def index
-    # Exercício pra você! Crie um escopo para ordenar
-    # os quartos dos mais recentes aos mais antigos.
-    @rooms = Room.most_recent
+    @rooms = Room.most_recent.map do |room|
+      # Não exibiremos o formulário na listagem
+      RoomPresenter.new(room, self, false)
+    end
   end
 
   def show
-    @room = Room.find(params[:id])
+    room_model = Room.find(params[:id])
+    @room = RoomPresenter.new(room_model, self)
   end
 
   def new
@@ -53,4 +55,5 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:description, :location, :title)
   end
+
 end
