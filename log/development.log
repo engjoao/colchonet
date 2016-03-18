@@ -11371,3 +11371,1027 @@ Processing by RoomsController#index as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
   Rendered layouts/_user_navbar.html.erb (2.0ms)
 Completed 200 OK in 100ms (Views: 97.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-14 21:34:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (33.0ms)
+Completed 200 OK in 273ms (Views: 218.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:49 -0300
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-03-14 21:34:51 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-14 21:34:53 -0300
+Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (50.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (72.1ms)
+  Rendered rooms/index.html.erb within layouts/application (74.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (1.0ms)
+Completed 200 OK in 164ms (Views: 155.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/user_sessions" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VPudvCICfIN9cHmDgy/h4llE+C5QO8vxd2l14/gJoWc="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 81ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-14 21:34:55 -0300
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2016-03-14 21:34:56 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_review_form.html.erb (1.0ms)
+  Rendered rooms/_review.html.erb (2.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (6.0ms)
+  Rendered rooms/show.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (1.0ms)
+Completed 200 OK in 91ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 10:44:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 287ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___119285931_51011556'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 10:47:40 -0300
+Processing by HomeController#index as HTML
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (10.0ms)
+Completed 200 OK in 195ms (Views: 195.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-15 10:47:41 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-15 10:47:42 -0300
+Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (1.0ms)[0m  SELECT "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (57.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (94.1ms)
+  Rendered rooms/index.html.erb within layouts/application (97.1ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 195ms (Views: 186.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 10:50:57 -0300
+Processing by HomeController#index as HTML
+  [1m[36mRoom Load (1.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 63ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___119285931_51011556'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 10:54:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 163ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__545903952_50960988'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 11:00:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 164ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___466461754_51288456'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 11:01:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 108ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___305957171_50903244'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 11:04:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 110ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___165706123_53911032'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 14:38:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 166ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1043165658_50293020'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 14:40:32 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 111ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__636694044_50646828'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 14:41:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__820579259_50793084'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 14:41:15 -0300
+Processing by HomeController#index as HTML
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__820579259_50793084'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 15:23:52 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 212ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__907808987_53783544'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 16:41:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 280ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1005725419_50474028'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 16:46:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 146ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___585523120_50563320'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-15 16:48:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 228ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__214092634_51742704'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 10:04:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 152ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__465967599_51515772'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 14:53:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 157ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___401822601_51330180'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 18:25:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 164ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1038103808_51246000'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 09:14:57 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 157ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___498518589_51385008'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 09:28:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 158ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___840543629_51335496'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 09:31:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 95ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1023990909_51008172'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 09:31:09 -0300
+Processing by HomeController#index as HTML
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1023990909_51008172'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 09:39:04 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 156ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___289394697_51221280'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 09:39:13 -0300
+Processing by HomeController#index as HTML
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )` to `config/initializers/assets.rb` and restart your server
+  (in C:/Sites/colcho net/vendor/assets/stylesheets/font-awesome.css.scss)):
+    4:    <title>Colchonet</title>
+    5:    <link href='http://fonts.googleapis.com/css?family=Pacifico'
+    6: 						rel='stylesheet' type='text/css'>
+    7:   <%= stylesheet_link_tag "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= csrf_meta_tags %>
+   10: </head>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___289394697_51221280'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 10:00:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (59.0ms)
+Completed 200 OK in 470ms (Views: 417.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-18 10:00:51 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-18 10:07:51 -0300
+Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC[0m
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (176.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (284.2ms)
+  Rendered rooms/index.html.erb within layouts/application (308.2ms)
+  Rendered layouts/_visitor_navbar.html.erb (1.0ms)
+Completed 200 OK in 431ms (Views: 417.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2016-03-18 10:07:58 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/new.html.erb within layouts/application (86.1ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 199ms (Views: 199.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iAWiWg4s2LmkLskuVdy0bHWQs4z4X8tkyNh63hicMpo=", "user_session"=>{"email"=>"eduardo@example.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."confirmed_at" IS NULL AND "users"."email" = 'eduardo@example.com' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 142ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+Processing by HomeController#index as HTML
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (3.0ms)
+Completed 200 OK in 112ms (Views: 111.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-18 10:08:10 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-18 10:09:07 -0300
+Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (1.0ms)[0m  [1mSELECT "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC[0m
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (16.0ms)
+  Rendered rooms/index.html.erb within layouts/application (17.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 125ms (Views: 122.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 10:37:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 375ms (Views: 265.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-18 10:37:14 -0300
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2016-03-18 10:44:42 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/new.html.erb within layouts/application (140.7ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 234ms (Views: 234.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0pfX++AuqMBMgXP3AIjV8IZMbXAcEvC3Ut0VMY+XUyk=", "user_session"=>{"email"=>"eduardo@example.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."confirmed_at" IS NULL AND "users"."email" = 'eduardo@example.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 156ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (15.7ms)
+Completed 200 OK in 125ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-18 10:44:50 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-18 10:45:44 -0300
+Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (156.3ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (218.7ms)
+  Rendered rooms/index.html.erb within layouts/application (218.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (0.0ms)
+Completed 200 OK in 328ms (Views: 312.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/user_sessions" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0pfX++AuqMBMgXP3AIjV8IZMbXAcEvC3Ut0VMY+XUyk="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-18 10:45:46 -0300
