@@ -4,11 +4,20 @@ class RoomsController < ApplicationController
     :only => [:new, :edit, :create, :update, :destroy]
 
   def index
-    @rooms = Room.most_recent.map do |room|
-      # Não exibiremos o formulário na listagem
+    @search_query = params[:q]
+    
+    @rooms = Room.search(@search_query).most_recent.map do |room|
+
       RoomPresenter.new(room, self, false)
     end
   end
+
+  # def index
+  #   @rooms = Room.most_recent.map do |room|
+  #     # Não exibiremos o formulário na listagem
+  #     RoomPresenter.new(room, self, false)
+  #   end
+  # end
 
   def show
     room_model = Room.find(params[:id])

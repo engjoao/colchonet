@@ -29,6 +29,9 @@ pt-BR:
   rooms:
     new:
       title: 'Novo quarto'
+      search_results: 'Resultados da busca'
+    search:
+      search_for: 'Busar por...'
     edit:
       title: 'Editar quarto'
     index:
