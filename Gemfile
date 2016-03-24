@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem "font-awesome-rails"
+gem 'friendly_id', '5.0.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

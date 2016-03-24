@@ -1,6 +1,13 @@
 class Room < ActiveRecord::Base
-  has_many :reviews, :dependent => :destroy
+  extend FriendlyId
+
+  has_many :reviews, dependent: :destroy
   belongs_to :user
+
+  validates_presence_of :title
+  validates_presence_of :slug
+
+  friendly_id :title, use: [:slugged, :history]
   
   def complete_name
 	"#{title}, #{location}"

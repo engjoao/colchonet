@@ -12,15 +12,8 @@ class RoomsController < ApplicationController
     end
   end
 
-  # def index
-  #   @rooms = Room.most_recent.map do |room|
-  #     # Não exibiremos o formulário na listagem
-  #     RoomPresenter.new(room, self, false)
-  #   end
-  # end
-
   def show
-    room_model = Room.find(params[:id])
+    room_model = Room.friendly.find(params[:id])
     @room = RoomPresenter.new(room_model, self)
   end
 
