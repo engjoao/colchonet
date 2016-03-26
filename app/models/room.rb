@@ -7,6 +7,7 @@ class Room < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :slug
 
+  mount_uploader :picture, PictureUploader
   friendly_id :title, use: [:slugged, :history]
   
   def complete_name

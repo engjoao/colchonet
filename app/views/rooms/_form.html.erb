@@ -15,19 +15,30 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+
   <div class="field">
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </div>
+
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
+
   <div class="field">
     <%= f.label :text %><br>
     <%= f.text_field :text %>
   </div>
+
+  <div>
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
+    <%= error_tag @room, :picture %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+  
 <% end %>

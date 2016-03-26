@@ -41,3 +41,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+gem 'carrierwave'
+gem 'rmagick', :require => 'RMagick'

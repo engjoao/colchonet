@@ -17976,3 +17976,770 @@ Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (28.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (15.0ms)
+Completed 200 OK in 473ms (Views: 351.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-25 23:11:56 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-25 23:12:02 -0300
+Processing by RoomsController#index as HTML
+  Rendered rooms/_search.html.erb (1.0ms)
+  [1m[36mRoom Load (1.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 3]]
+  Rendered rooms/_review.html.erb (64.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (4.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (122.1ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "rooms"[0m
+  Rendered rooms/index.html.erb within layouts/application (147.1ms)
+  Rendered layouts/_visitor_navbar.html.erb (1.0ms)
+Completed 200 OK in 260ms (Views: 251.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2016-03-25 23:12:03 -0300
+
+
+Started GET "/rooms/quarto-perto-da-faculdade" for 127.0.0.1 at 2016-03-25 23:12:05 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"quarto-perto-da-faculdade"}
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = 'quarto-perto-da-faculdade'  ORDER BY "rooms"."id" ASC LIMIT 1
+  Rendered rooms/_review_form.html.erb (1.0ms)
+  Rendered rooms/_review.html.erb (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (8.0ms)
+  Rendered rooms/show.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (1.0ms)
+Completed 200 OK in 153ms (Views: 131.1ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPictureToRooms (20160326021415)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "rooms" ADD "picture" varchar(255)[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160326021415"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_room_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_room_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rooms_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rooms_on_slug' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rooms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rooms_on_user_id' AND type='index'
+
+
+
+Started GET "/rooms/quarto-perto-da-faculdade" for 127.0.0.1 at 2016-03-25 23:23:52 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"quarto-perto-da-faculdade"}
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = 'quarto-perto-da-faculdade'  ORDER BY "rooms"."id" ASC LIMIT 1
+  Rendered rooms/_review_form.html.erb (17.0ms)
+  Rendered rooms/_review.html.erb (20.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (96.0ms)
+  Rendered rooms/show.html.erb within layouts/application (112.1ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 445ms (Views: 308.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rooms/quarto-perto-da-faculdade" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"quarto-perto-da-faculdade"}
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = 'quarto-perto-da-faculdade'  ORDER BY "rooms"."id" ASC LIMIT 1
+  Rendered rooms/_review_form.html.erb (0.0ms)
+  Rendered rooms/_review.html.erb (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (7.0ms)
+  Rendered rooms/show.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 119.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (1.0ms)
+Completed 200 OK in 114ms (Views: 113.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms/quarto-perto-da-faculdade" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"quarto-perto-da-faculdade"}
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = 'quarto-perto-da-faculdade'  ORDER BY "rooms"."id" ASC LIMIT 1[0m
+  Rendered rooms/_review_form.html.erb (1.0ms)
+  Rendered rooms/_review.html.erb (2.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (7.0ms)
+  Rendered rooms/show.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 119ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-25 23:23:53 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+Processing by HomeController#index as HTML
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 111ms (Views: 111.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:05 -0300
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2016-03-25 23:24:07 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/new.html.erb within layouts/application (49.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (0.0ms)
+Completed 200 OK in 159ms (Views: 159.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e7kQzl4a7Qe7ED6tw4jE6ChGgxV/vlBWPMZmEbLN44E=", "user_session"=>{"email"=>"eduardo@example.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."confirmed_at" IS NULL AND "users"."email" = 'eduardo@example.com' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+Processing by HomeController#index as HTML
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (3.0ms)
+Completed 200 OK in 127ms (Views: 126.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:13 -0300
+
+
+Started GET "/rooms/1" for 127.0.0.1 at 2016-03-25 23:24:16 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (1.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = '1'  ORDER BY "rooms"."id" ASC LIMIT 1[0m
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms" INNER JOIN "friendly_id_slugs" ON "friendly_id_slugs"."sluggable_id" = "rooms"."id" AND "friendly_id_slugs"."sluggable_type" = 'Room' WHERE ("friendly_id_slugs"."sluggable_type" = 'Room' AND "friendly_id_slugs"."slug" = '1')  ORDER BY "rooms"."id" ASC LIMIT 1
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (1.0ms)[0m  [1mSELECT  "reviews".* FROM "reviews"  WHERE "reviews"."room_id" = ? AND "reviews"."user_id" = 1 LIMIT 1[0m  [["room_id", 1]]
+  Rendered rooms/_review_form.html.erb (55.0ms)
+  Rendered rooms/_review.html.erb (57.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (64.0ms)
+  Rendered rooms/show.html.erb within layouts/application (65.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 215ms (Views: 175.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/rooms/1/edit" for 127.0.0.1 at 2016-03-25 23:24:19 -0300
+Processing by RoomsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."user_id" = ? AND "rooms"."id" = ? LIMIT 1  [["user_id", 1], ["id", 1]]
+  Rendered rooms/_form.html.erb (9.0ms)
+  Rendered rooms/edit.html.erb within layouts/application (12.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 127ms (Views: 122.1ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/rooms/1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+Processing by RoomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e7kQzl4a7Qe7ED6tw4jE6ChGgxV/vlBWPMZmEbLN44E=", "room"=>{"title"=>"Fazenda", "location"=>"Anápolis, GO", "description"=>"Quarto na fazenda com café colonial", "text"=>"Chalé próximo a cachoeira.", "picture"=>#<ActionDispatch::Http::UploadedFile:0x640d0d0 @tempfile=#<Tempfile:C:/Users/ESG250/AppData/Local/Temp/RackMultipart20160325-9584-rm8n1a>, @original_filename="chale_10_visconde_de_maua_06.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"room[picture]\"; filename=\"chale_10_visconde_de_maua_06.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Atualizar Quarto", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."user_id" = ? AND "rooms"."id" = ? LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+Unpermitted parameters: text, picture
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mRoom Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "rooms" INNER JOIN "friendly_id_slugs" ON "friendly_id_slugs"."sluggable_id" = "rooms"."id" AND "friendly_id_slugs"."sluggable_type" = 'Room' WHERE (sluggable_id <> 1) AND "rooms"."slug" = 'fazenda' LIMIT 1[0m
+  [1m[35mRoom Exists (0.0ms)[0m  SELECT  1 AS one FROM "rooms" INNER JOIN "friendly_id_slugs" ON "friendly_id_slugs"."sluggable_id" = "rooms"."id" AND "friendly_id_slugs"."sluggable_type" = 'Room' WHERE (sluggable_id <> 1) AND ("friendly_id_slugs"."sluggable_type" = 'Room' AND "friendly_id_slugs"."slug" = 'fazenda') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "rooms" SET "slug" = ?, "updated_at" = ? WHERE "rooms"."id" = 1[0m  [["slug", "fazenda"], ["updated_at", "2016-03-26 02:24:32.292339"]]
+  [1m[35mFriendlyId::Slug Load (0.0ms)[0m  SELECT  "friendly_id_slugs".* FROM "friendly_id_slugs"  WHERE "friendly_id_slugs"."sluggable_id" = ? AND "friendly_id_slugs"."sluggable_type" = ?  ORDER BY "friendly_id_slugs".id DESC LIMIT 1  [["sluggable_id", 1], ["sluggable_type", "Room"]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "friendly_id_slugs" WHERE "friendly_id_slugs"."sluggable_id" = ? AND "friendly_id_slugs"."sluggable_type" = ? AND "friendly_id_slugs"."slug" = 'fazenda'[0m  [["sluggable_id", 1], ["sluggable_type", "Room"]]
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "friendly_id_slugs" ("created_at", "slug", "sluggable_id", "sluggable_type") VALUES (?, ?, ?, ?)  [["created_at", "2016-03-26 02:24:32.302347"], ["slug", "fazenda"], ["sluggable_id", 1], ["sluggable_type", "Room"]]
+  [1m[36m (68.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/rooms/fazenda
+Completed 302 Found in 188ms (ActiveRecord: 70.1ms)
+
+
+Started GET "/rooms/fazenda" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"fazenda"}
+  [1m[35mRoom Load (1.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = 'fazenda'  ORDER BY "rooms"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.0ms)[0m  SELECT  "reviews".* FROM "reviews"  WHERE "reviews"."room_id" = ? AND "reviews"."user_id" = 1 LIMIT 1  [["room_id", 1]]
+  Rendered rooms/_review_form.html.erb (7.0ms)
+  Rendered rooms/_review.html.erb (10.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (18.0ms)
+  Rendered rooms/show.html.erb within layouts/application (20.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (3.0ms)
+Completed 200 OK in 155ms (Views: 148.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-25 23:24:32 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-25 23:24:35 -0300
+Processing by RoomsController#index as HTML
+  Rendered rooms/_search.html.erb (0.0ms)
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 3]]
+  Rendered rooms/_review.html.erb (6.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (4.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (28.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "rooms"[0m
+  Rendered rooms/index.html.erb within layouts/application (48.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 185ms (Views: 176.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rooms/2" for 127.0.0.1 at 2016-03-25 23:24:37 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoom Load (1.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = '2'  ORDER BY "rooms"."id" ASC LIMIT 1[0m
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms" INNER JOIN "friendly_id_slugs" ON "friendly_id_slugs"."sluggable_id" = "rooms"."id" AND "friendly_id_slugs"."sluggable_type" = 'Room' WHERE ("friendly_id_slugs"."sluggable_type" = 'Room' AND "friendly_id_slugs"."slug" = '2')  ORDER BY "rooms"."id" ASC LIMIT 1
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.0ms)[0m  [1mSELECT  "reviews".* FROM "reviews"  WHERE "reviews"."room_id" = ? AND "reviews"."user_id" = 1 LIMIT 1[0m  [["room_id", 2]]
+  Rendered rooms/_review_form.html.erb (7.0ms)
+  Rendered rooms/_review.html.erb (9.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (13.0ms)
+  Rendered rooms/show.html.erb within layouts/application (14.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 131ms (Views: 125.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-03-25 23:24:42 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 121ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-25 23:24:44 -0300
+Processing by RoomsController#index as HTML
+  Rendered rooms/_search.html.erb (0.0ms)
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 3]]
+  Rendered rooms/_review.html.erb (5.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (5.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (27.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "rooms"
+  Rendered rooms/index.html.erb within layouts/application (37.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (3.0ms)
+Completed 200 OK in 146ms (Views: 146.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms/2" for 127.0.0.1 at 2016-03-25 23:26:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = '2'  ORDER BY "rooms"."id" ASC LIMIT 1
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms" INNER JOIN "friendly_id_slugs" ON "friendly_id_slugs"."sluggable_id" = "rooms"."id" AND "friendly_id_slugs"."sluggable_type" = 'Room' WHERE ("friendly_id_slugs"."sluggable_type" = 'Room' AND "friendly_id_slugs"."slug" = '2')  ORDER BY "rooms"."id" ASC LIMIT 1[0m
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.0ms)[0m  SELECT  "reviews".* FROM "reviews"  WHERE "reviews"."room_id" = ? AND "reviews"."user_id" = 1 LIMIT 1  [["room_id", 2]]
+  Rendered rooms/_review_form.html.erb (91.1ms)
+  Rendered rooms/_review.html.erb (93.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (107.1ms)
+  Rendered rooms/show.html.erb within layouts/application (114.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (3.0ms)
+Completed 200 OK in 394ms (Views: 298.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-25 23:26:36 -0300
+Processing by RoomsController#index as HTML
+  Rendered rooms/_search.html.erb (1.0ms)
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 3]]
+  Rendered rooms/_review.html.erb (11.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (4.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (34.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "rooms"[0m
+  Rendered rooms/index.html.erb within layouts/application (47.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (3.0ms)
+Completed 200 OK in 160ms (Views: 155.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rooms/2" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoom Load (1.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = '2'  ORDER BY "rooms"."id" ASC LIMIT 1[0m
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms" INNER JOIN "friendly_id_slugs" ON "friendly_id_slugs"."sluggable_id" = "rooms"."id" AND "friendly_id_slugs"."sluggable_type" = 'Room' WHERE ("friendly_id_slugs"."sluggable_type" = 'Room' AND "friendly_id_slugs"."slug" = '2')  ORDER BY "rooms"."id" ASC LIMIT 1
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.0ms)[0m  [1mSELECT  "reviews".* FROM "reviews"  WHERE "reviews"."room_id" = ? AND "reviews"."user_id" = 1 LIMIT 1[0m  [["room_id", 2]]
+  Rendered rooms/_review_form.html.erb (5.0ms)
+  Rendered rooms/_review.html.erb (6.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (13.0ms)
+  Rendered rooms/show.html.erb within layouts/application (15.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 137ms (Views: 131.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:37 -0300
+
+
+Started GET "/rooms/2/edit" for 127.0.0.1 at 2016-03-25 23:26:39 -0300
+Processing by RoomsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."user_id" = ? AND "rooms"."id" = ? LIMIT 1  [["user_id", 1], ["id", 2]]
+  Rendered rooms/_form.html.erb (8.0ms)
+  Rendered rooms/edit.html.erb within layouts/application (10.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (3.0ms)
+Completed 200 OK in 129ms (Views: 124.1ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/rooms/2" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+Processing by RoomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e7kQzl4a7Qe7ED6tw4jE6ChGgxV/vlBWPMZmEbLN44E=", "room"=>{"title"=>"Chalé", "location"=>"Pirinopólis, GO", "description"=>"Chalé próximo a cachoeira.", "text"=>"Chalé próximo a cachoeira.", "picture"=>#<ActionDispatch::Http::UploadedFile:0x5c82528 @tempfile=#<Tempfile:C:/Users/ESG250/AppData/Local/Temp/RackMultipart20160325-6240-1s8q76h>, @original_filename="chale_10_visconde_de_maua_06.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"room[picture]\"; filename=\"chale_10_visconde_de_maua_06.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Atualizar Quarto", "id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."user_id" = ? AND "rooms"."id" = ? LIMIT 1[0m  [["user_id", 1], ["id", 2]]
+Unpermitted parameters: text, picture
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mRoom Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "rooms" INNER JOIN "friendly_id_slugs" ON "friendly_id_slugs"."sluggable_id" = "rooms"."id" AND "friendly_id_slugs"."sluggable_type" = 'Room' WHERE (sluggable_id <> 2) AND "rooms"."slug" = 'chale' LIMIT 1[0m
+  [1m[35mRoom Exists (0.0ms)[0m  SELECT  1 AS one FROM "rooms" INNER JOIN "friendly_id_slugs" ON "friendly_id_slugs"."sluggable_id" = "rooms"."id" AND "friendly_id_slugs"."sluggable_type" = 'Room' WHERE (sluggable_id <> 2) AND ("friendly_id_slugs"."sluggable_type" = 'Room' AND "friendly_id_slugs"."slug" = 'chale') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "rooms" SET "slug" = ?, "updated_at" = ? WHERE "rooms"."id" = 2[0m  [["slug", "chale"], ["updated_at", "2016-03-26 02:26:46.690858"]]
+  [1m[35mFriendlyId::Slug Load (0.0ms)[0m  SELECT  "friendly_id_slugs".* FROM "friendly_id_slugs"  WHERE "friendly_id_slugs"."sluggable_id" = ? AND "friendly_id_slugs"."sluggable_type" = ?  ORDER BY "friendly_id_slugs".id DESC LIMIT 1  [["sluggable_id", 2], ["sluggable_type", "Room"]]
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "friendly_id_slugs" WHERE "friendly_id_slugs"."sluggable_id" = ? AND "friendly_id_slugs"."sluggable_type" = ? AND "friendly_id_slugs"."slug" = 'chale'[0m  [["sluggable_id", 2], ["sluggable_type", "Room"]]
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "friendly_id_slugs" ("created_at", "slug", "sluggable_id", "sluggable_type") VALUES (?, ?, ?, ?)  [["created_at", "2016-03-26 02:26:46.698862"], ["slug", "chale"], ["sluggable_id", 2], ["sluggable_type", "Room"]]
+  [1m[36m (17.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/rooms/chale
+Completed 302 Found in 112ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/rooms/chale" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"chale"}
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = 'chale'  ORDER BY "rooms"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.0ms)[0m  SELECT  "reviews".* FROM "reviews"  WHERE "reviews"."room_id" = ? AND "reviews"."user_id" = 1 LIMIT 1  [["room_id", 2]]
+  Rendered rooms/_review_form.html.erb (6.0ms)
+  Rendered rooms/_review.html.erb (7.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (12.0ms)
+  Rendered rooms/show.html.erb within layouts/application (14.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 144ms (Views: 142.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:46 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:47 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:47 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-25 23:26:47 -0300
+
+
+Started GET "/rooms" for 127.0.0.1 at 2016-03-25 23:26:48 -0300
+Processing by RoomsController#index as HTML
+  Rendered rooms/_search.html.erb (1.0ms)
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"   ORDER BY "rooms"."created_at" DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 3]]
+  Rendered rooms/_review.html.erb (5.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered rooms/_review.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."points") AS avg_id FROM "reviews"  WHERE "reviews"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."room_id" = ?  [["room_id", 1]]
+  Rendered rooms/_review.html.erb (3.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered rooms/_room.html.erb (24.1ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "rooms"[0m
+  Rendered rooms/index.html.erb within layouts/application (34.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 146ms (Views: 146.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms/chale" for 127.0.0.1 at 2016-03-25 23:26:51 -0300
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"chale"}
+  [1m[36mRoom Load (0.0ms)[0m  [1mSELECT  "rooms".* FROM "rooms"  WHERE "rooms"."slug" = 'chale'  ORDER BY "rooms"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.0ms)[0m  [1mSELECT  "reviews".* FROM "reviews"  WHERE "reviews"."room_id" = ? AND "reviews"."user_id" = 1 LIMIT 1[0m  [["room_id", 2]]
+  Rendered rooms/_review_form.html.erb (5.0ms)
+  Rendered rooms/_review.html.erb (7.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered rooms/_room.html.erb (11.0ms)
+  Rendered rooms/show.html.erb within layouts/application (12.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_user_navbar.html.erb (2.0ms)
+Completed 200 OK in 127ms (Views: 125.1ms | ActiveRecord: 0.0ms)
