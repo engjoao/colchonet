@@ -17931,3 +17931,48 @@ Processing by RoomsController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered layouts/_user_navbar.html.erb (0.0ms)
 Completed 200 OK in 109ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-25 22:53:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mRoom Load (0.0ms)[0m  SELECT  "rooms".* FROM "rooms"  LIMIT 3
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_visitor_navbar.html.erb (10.0ms)
+Completed 200 OK in 392ms (Views: 296.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/room.css?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/shadow.css?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/default.css?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/room.js?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-25 22:53:01 -0300

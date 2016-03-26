@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem "font-awesome-rails"
 gem 'friendly_id', '5.0.3'
+gem 'kaminari'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
